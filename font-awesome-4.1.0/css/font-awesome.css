@@ -11,6 +11,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 .fa {
   display: inline-block;
   font-family: FontAwesome;
@@ -21,6 +22,11 @@
   -moz-osx-font-smoothing: grayscale;
 }
 /* makes the font 33% larger relative to the icon container */
+
+.fa-cog {
+  color: black;
+}
+
 .fa-lg {
   font-size: 1.33333333em;
   line-height: 0.75em;
