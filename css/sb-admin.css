@@ -9,7 +9,7 @@
 
 body {
     margin-top: 100px;
-    background-color: #222;
+    background-color: #ffffff;
 }
 
 @media(min-width:768px) {
@@ -58,7 +58,7 @@ body {
     padding-top: 15px;
     padding-bottom: 15px;
     line-height: 20px;
-    color: #999;
+    color: #f5f5f5;
 }
 
 .top-nav>li>a:hover,
@@ -123,7 +123,7 @@ ul.alert-dropdown {
         border: none;
         border-radius: 0;
         overflow-y: auto;
-        background-color: #222;
+        background-color: #ffffff;
     }
 
     .side-nav>li>a {
@@ -133,7 +133,7 @@ ul.alert-dropdown {
     .side-nav li a:hover,
     .side-nav li a:focus {
         outline: none;
-        background-color: #000 !important;
+        background-color: #C5DCDC !important; /* COLOR PEST */
     }
 }
 
