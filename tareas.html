@@ -196,72 +196,71 @@
                 </div>
                 <div class="col-lg-12"> 
                     <div class="row">  
-                        <div class="panel-heading">     
-                            <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Nueva Tarea</button>
-                                <!-- Modal -->
-                                <div id="myModal" class="modal fade" role="dialog">
-                                    <div class="modal-dialog">
-                                        <!-- Modal content-->
-                                        <div class="modal-content">
-                                            <div class="modal-header">
-                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                <h4 class="modal-title">Nueva Tarea</h4>
-                                            </div>
-                                            <div class="modal-body">
-                                                <div class="form-group">
-                                                    <label>Nombre de la tarea</label>
-                                                    <input class="form-control">
+                        <div class="panel-heading"> 
+                            <a href="#" class="btn btn-order">Ordenar por</a>
+                            <a href="#" class="btn btn-order dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Prioridad</a></li>
+                                <li><a href="#">Fecha Límite</a></li>
+                                <li><a href="#">Caso</a></li>
+                            </ul>
+                            <div class="pull-right">   
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Nueva Tarea</button>
+                                    <!-- Modal -->
+                                    <div id="myModal" class="modal fade" role="dialog">
+                                        <div class="modal-dialog">
+                                            <!-- Modal content-->
+                                            <div class="modal-content">
+                                                <div class="modal-header">
+                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                    <h4 class="modal-title">Nueva Tarea</h4>
                                                 </div>
-                                                <div class="form-group">
-                                                    <label>Caso</label>
-                                                    <select id="select" class="form-control"></select>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Descripción</label>
-                                                    <textarea class="form-control" rows="3"></textarea>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Fecha Límite</label>
-                                                    <div class="input-group">
-                                                        <input type="text" class="form-control">
-                                                        <span class="input-group-btn">
-                                                            <button class="btn" type="button"><i class="fa fa-calendar"></i>
-                                                            </button>
-                                                        </span>
-                                                    </div>
-                                                </div>
-                                                <div class="form-group">
-                                                    <label>Alarma</label>
+                                                <div class="modal-body">
                                                     <div class="form-group">
-                                                        <label class="inline">
-                                                            <input type="checkbox">
-                                                        </label>
-                                                        <label class="inline">
-                                                            <input type="form-control">
-                                                        </label>
-                                                        <label class="inline">
-                                                            <select id="select" class="form-control"> <option>días antes</option></select>
-                                                        </label>                                                        
+                                                        <label>Nombre de la tarea</label>
+                                                        <input class="form-control">
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Caso</label>
+                                                        <select id="select" class="form-control"></select>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Descripción</label>
+                                                        <textarea class="form-control" rows="3"></textarea>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Fecha Límite</label>
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control">
+                                                            <span class="input-group-btn">
+                                                                <button class="btn" type="button"><i class="fa fa-calendar"></i>
+                                                                </button>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="form-group">
+                                                        <label>Alarma</label>
+                                                        <div class="form-group">
+                                                            <label class="inline">
+                                                                <input type="checkbox">
+                                                            </label>
+                                                            <label class="inline">
+                                                                <input type="form-control">
+                                                            </label>
+                                                            <label class="inline">
+                                                                <select id="select" class="form-control"> <option>días antes</option></select>
+                                                            </label>                                                        
+                                                        </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="modal-footer">
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Guardar</button>
-                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                <div class="modal-footer">
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Guardar</button>
+                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                             </div>             
-                                               
-                            <div class="pull-right">
-                                <a href="#" class="btn btn-order">Ordenar por</a>
-                                <a href="#" class="btn btn-order dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Prioridad</a></li>
-                                    <li><a href="#">Fecha Límite</a></li>
-                                    <li><a href="#">Caso</a></li>
-                                </ul>
-                            </div>
                         </div>
                     </div>
                 </div>                 <!-- /.row -->
@@ -301,44 +300,44 @@
                                                     <td>2 día(s) antes</td>
                                                 </div>
                                                 <!-- comentarios-->
-                                                <a data-toggle="modal" data-target="#myModal-Coments"><label>Comentarios</label></a>
-                                                    <!-- Modal -->
-                                                    <div id="myModal-Coments" class="modal fade" role="dialog">
-                                                        <div class="modal-dialog">
-                                                            <!-- Modal content-->
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                                    <h4 class="modal-title">Comentarios</h4>
+                                                <a data-toggle="modal" data-target="#myModal-Coments-1"><label>Comentarios</label></a>
+                                                <!-- Modal -->
+                                                <div id="myModal-Coments-1" class="modal fade" role="dialog">
+                                                    <div class="modal-dialog">
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                <h4 class="modal-title">Comentarios</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h3 class="panel-title">Comentario 1</h3>
+                                                                        </div>
+                                                                        <div class="panel-body">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
-                                                                <div class="modal-body">
+                                                                <label></label>
+                                                                <div class="form-group">
                                                                     <div>
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">
-                                                                                <h3 class="panel-title">Comentario 1</h3>
-                                                                            </div>
-                                                                            <div class="panel-body">
-                                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                                            </div>
-                                                                        </div>
+                                                                        <h4>Nuevo Comentario</h4>
                                                                     </div>
-                                                                    <label></label>
-                                                                    <div class="form-group">
-                                                                        <div>
-                                                                            <h4>Nuevo Comentario</h4>
-                                                                        </div>
-                                                                        <label>Titulo</label>
-                                                                        <input class="form-control">
-                                                                        <label>Contenido</label>
-                                                                        <textarea class="form-control" rows="4"></textarea>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Guardar</button>
-                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                                    <label>Titulo</label>
+                                                                    <input class="form-control">
+                                                                    <label>Contenido</label>
+                                                                    <textarea class="form-control" rows="4"></textarea>
                                                                 </div>
                                                             </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Guardar</button>
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                            </div>
                                                         </div>
+                                                    </div>
                                                 </div> 
                                                 <!--comentarios-->
                                             </div>
@@ -374,9 +373,9 @@
                                                 <td>1 día(s) antes</td>
                                             </div>
                                             <!-- comentarios-->
-                                                <a data-toggle="modal" data-target="#myModal-Coments"><label>Comentarios</label></a>
+                                                <a data-toggle="modal" data-target="#myModal-Coments-2"><label>Comentarios</label></a>
                                                     <!-- Modal -->
-                                                    <div id="myModal-Coments" class="modal fade" role="dialog">
+                                                    <div id="myModal-Coments-2" class="modal fade" role="dialog">
                                                         <div class="modal-dialog">
                                                             <!-- Modal content-->
                                                             <div class="modal-content">
@@ -419,9 +418,9 @@
                                         <div class="panel-body">
                                             <div>
                                                 <label>Descripción</label>
-                                                    <div class= description>
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                                                    </div>
+                                                <div class= description>
+                                                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                                </div>
                                             </div>
                                             <div>
                                                 <label>Caso: </label>
@@ -435,6 +434,36 @@
                                                 <label>Alarma: </label>
                                                 <td>2 días antes</td>
                                             </div>
+                                            <!-- comentarios-->
+                                            <a data-toggle="modal" data-target="#myModal-Coments-3"><label>Comentarios</label></a>
+                                                <!-- Modal -->
+                                                <div id="myModal-Coments-3" class="modal fade" role="dialog">
+                                                    <div class="modal-dialog">
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                <h4 class="modal-title">Comentarios</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div class="form-group">
+                                                                    <div>
+                                                                        <h4>Nuevo Comentario</h4>
+                                                                    </div>
+                                                                    <label>Titulo</label>
+                                                                    <input class="form-control">
+                                                                    <label>Contenido</label>
+                                                                    <textarea class="form-control" rows="4"></textarea>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Guardar</button>
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div> 
+                                                <!--comentarios-->
                                         </div>
                                     </div>
                                 </div>
@@ -453,16 +482,14 @@
                 </div>
                 <div class="col-lg-12"> 
                     <div class="row">  
-                        <div class="panel-heading">     
-                            <div class="pull-right">
-                                <a href="#" class="btn btn-order">Ordenar por</a>
-                                <a href="#" class="btn btn-order dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#">Prioridad</a></li>
-                                    <li><a href="#">Fecha Límite</a></li>
-                                    <li><a href="#">Caso</a></li>
-                                </ul>
-                            </div>
+                        <div class="panel-heading">   
+                            <a href="#" class="btn btn-order">Ordenar por</a>
+                            <a href="#" class="btn btn-order dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#">Prioridad</a></li>
+                                <li><a href="#">Fecha Límite</a></li>
+                                <li><a href="#">Caso</a></li>
+                            </ul>
                         </div>
                     </div>
                 </div>                 <!-- /.row -->
@@ -497,43 +524,43 @@
                                                     <td>2 día(s) antes</td>
                                                 </div>
                                                 <!-- comentarios-->
-                                                <a data-toggle="modal" data-target="#myModal-Coments-T"><label>Comentarios</label></a>
-                                                    <!-- Modal -->
-                                                    <div id="myModal-Coments-T" class="modal fade" role="dialog">
-                                                        <div class="modal-dialog">
-                                                            <!-- Modal content-->
-                                                            <div class="modal-content">
-                                                                <div class="modal-header">
-                                                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                                                    <h4 class="modal-title">Comentarios</h4>
-                                                                </div>
-                                                                <div class="modal-body">
-                                                                    <div>
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">
-                                                                                <h3 class="panel-title">Comentario 1</h3>
-                                                                            </div>
-                                                                            <div class="panel-body">
-                                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                                            </div>
+                                                <a data-toggle="modal" data-target="#myModal-Coments-T-1"><label>Comentarios</label></a>
+                                                <!-- Modal -->
+                                                <div id="myModal-Coments-T-1" class="modal fade" role="dialog">
+                                                    <div class="modal-dialog">
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                <h4 class="modal-title">Comentarios</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h3 class="panel-title">Comentario 1</h3>
                                                                         </div>
-                                                                    </div>
-                                                                    <div>
-                                                                        <div class="panel panel-default">
-                                                                            <div class="panel-heading">
-                                                                                <h3 class="panel-title">Comentario 2</h3>
-                                                                            </div>
-                                                                            <div class="panel-body">
-                                                                                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-                                                                            </div>
+                                                                        <div class="panel-body">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
                                                                         </div>
                                                                     </div>
                                                                 </div>
-                                                                <div class="modal-footer">
-                                                                    <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                                <div>
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h3 class="panel-title">Comentario 2</h3>
+                                                                        </div>
+                                                                        <div class="panel-body">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </div>
                                                                 </div>
                                                             </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                            </div>
                                                         </div>
+                                                    </div>
                                                 </div> 
                                             </div>
                                         </div>
@@ -562,35 +589,35 @@
                                                 <label>Alarma: </label>
                                                 <td>1 día(s) antes</td>
                                             </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading">
-                                        <a data-toggle="collapse" data-parent="#accordionT" href="#collapseThree-T">Llamar a la municipalidad</a>
-                                        <div class="pull-right">
-                                        </div>
-                                    </div>
-                                    <div id="collapseThree-T" class="panel-collapse collapse">
-                                        <div class="panel-body">
-                                            <div>
-                                                <label>Descripción</label>
-                                                    <div class= description>
-                                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
+                                            <!-- comentarios-->
+                                                <a data-toggle="modal" data-target="#myModal-Coments-T-2"><label>Comentarios</label></a>
+                                                    <!-- Modal -->
+                                                <div id="myModal-Coments-T-2" class="modal fade" role="dialog">
+                                                    <div class="modal-dialog">
+                                                        <!-- Modal content-->
+                                                        <div class="modal-content">
+                                                            <div class="modal-header">
+                                                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                                <h4 class="modal-title">Comentarios</h4>
+                                                            </div>
+                                                            <div class="modal-body">
+                                                                <div>
+                                                                    <div class="panel panel-default">
+                                                                        <div class="panel-heading">
+                                                                            <h3 class="panel-title">Comentario 1</h3>
+                                                                        </div>
+                                                                        <div class="panel-body">
+                                                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="modal-footer">
+                                                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                                                            </div>
+                                                        </div>
                                                     </div>
-                                            </div>
-                                            <div>
-                                                <label>Caso: </label>
-                                                <td>Caso 3</td>
-                                            </div>
-                                            <div>
-                                                <label>Fecha Límite: </label>
-                                                <td>30/09/2016</td>
-                                            </div>
-                                            <div>
-                                                <label>Alarma: </label>
-                                                <td>2 días antes</td>
-                                            </div>
+                                                </div> 
                                         </div>
                                     </div>
                                 </div>
