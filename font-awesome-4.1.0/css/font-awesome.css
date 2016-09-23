@@ -12,6 +12,10 @@
   font-style: normal;
 }
 
+.fa-search.fa-vermas{
+  color: grey;
+}
+
 .fa {
   display: inline-block;
   font-family: FontAwesome;
