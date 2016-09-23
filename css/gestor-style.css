@@ -1,0 +1,63 @@
+html, body{
+	background-color: #002840;
+}
+
+.text-title{
+	color: white;	
+}
+.div-main{
+	padding-bottom: 20px;
+	padding-top: 20px;
+}
+.div_fill{
+	background: #283D55;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	margin-bottom: 10px;
+}
+.div-form{
+	padding-bottom: 10px;
+	padding-top: 10px;
+	width: 100%;
+	border: 1px #DEDEEF solid;
+	border-radius: 13px;
+}
+.font-face{
+	font-family: 'Open Sans', sans-serif;
+}
+.form-padding{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 100%;
+}
+.rounded-style{
+	border: 1px solid #DEDEEF;
+	border-radius: 5px;
+}
+.inputtext-right{
+	width: 50%;
+	padding-bottom: 10px;
+	float: left;
+}
+.inputtext-left{
+	width: 50%;
+	padding-bottom: 10px;
+	overflow: hidden;
+}
+.sub-form-padding{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	width: 50%;
+}
+
+.desc-div{
+	width: 100%;
+	display: inline-block;
+}
+
+.wrapper{
+	text-align: center;
+}
+.b-pos-abs{
+	margin-left: 30px;
+}
