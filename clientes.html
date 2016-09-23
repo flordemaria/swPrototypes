@@ -9,8 +9,8 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Invisibles - Intranet</title>    
-    
+    <title>Invisibles - Clientes</title>
+
     <!-- Font: Lato -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
@@ -19,6 +19,9 @@
 
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
+
+    <!-- Morris Charts CSS -->
+    <!--<link href="css/plugins/morris.css" rel="stylesheet">-->
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
@@ -167,11 +170,11 @@
                         <a href="tareas.html"><i class="fa fa-fw fa-check"></i> Tareas</a>
                     </li>
                     <li>
-                        <a href="notasA.html"><i class="fa fa-fw fa-pencil-square-o"></i> Notas Alumno</a>                 
-                    </li> 
+                        <a href="notasA.html"><i class="fa fa-fw fa-pencil-square-o"></i> Notas Alumno</a>
+                    </li>
                     <li>
                         <a href="notasP.html"><i class="fa fa-fw fa-pencil-square-o"></i> Notas Profesor</a>
-                    </li>                    
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -185,74 +188,178 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <h1 class="page-header">
-                            Tables
+                            Clientes
                         </h1>
                     </div>
                 </div>
                 <!-- /.row -->
 
+                <!-- Formulario-->
                 <div class="row">
-                    <div class="col-lg-6">
-                        <h2>Basic Table</h2>
+
+                    <div class="col-lg-1"></div>
+                    <div class="jumbotron col-lg-10">
+                        <form role="form">
+                            <div class="row">
+
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label>Nombre</label>
+                                        <input class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label>Apellido Paterno</label>
+                                        <input class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label>Apellido Materno</label>
+                                        <input class="form-control">
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="row">
+
+                                <div class="col-lg-2">
+                                    <div class="form-group">
+                                        <label>DNI</label>
+                                        <input class="form-control">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3 col-md-offset-1">
+                                    <div class="form-group">
+                                        <label>Clientes registrados entre: </label>
+                                        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-3">
+                                    <div class="form-group">
+                                        <label> &nbsp;</label>
+                                        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                                    </div>
+                                </div>
+
+                            </div>
+                        </form>
+
+                        <!--boton-->
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Buscar
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+                <!-- /.row -->
+
+
+
+                <!-- Tabla -->
+                <div class="row">
+                    <!-- Margen -->
+                    <div class="col-lg-1"></div>
+
+                    <div class="col-lg-10">
+                        <h1></h1>
                         <div class="table-responsive">
                             <table class="table table-hover">
                                 <thead>
                                     <tr>
-                                        <th>Page</th>
-                                        <th>Visits</th>
-                                        <th>% New Visits</th>
-                                        <th>Revenue</th>
+                                        <th>Código</th>
+                                        <th>Nombre</th>
+                                        <th>Apellidos</th>
+                                        <th>DNI</th>
+                                        <th>Fecha Registro</th>
+                                        <th>Acciones</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>/index.html</td>
-                                        <td>1265</td>
-                                        <td>32.3%</td>
-                                        <td>$321.33</td>
+                                        <td>001</td>
+                                        <td>Hugo </td>
+                                        <td>Alvarez Cárdenas</td>
+                                        <td>45745632</td>
+                                        <td>05/07/2015</td>
+                                        <td>
+                                            <i class="fa fa-1x fa-search" style="color:green"></i>
+                                            <i class="fa fa-1x fa-briefcase" style="color:brown"></i>
+                                            <i class="fa fa-1x fa-pencil" style="color:orange"></i>
+                                            <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td>/about.html</td>
-                                        <td>261</td>
-                                        <td>33.3%</td>
-                                        <td>$234.12</td>
+                                        <td>002</td>
+                                        <td>Paco </td>
+                                        <td>Galvez Torres</td>
+                                        <td>&nbsp;&nbsp;&nbsp;--</td>
+                                        <td>20/08/2015</td>
+                                        <td>
+                                            <i class="fa fa-1x fa-search" style="color:green"></i>
+                                            <i class="fa fa-1x fa-briefcase" style="color:brown"></i>
+                                            <i class="fa fa-1x fa-pencil" style="color:orange"></i>
+                                            <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td>/sales.html</td>
-                                        <td>665</td>
-                                        <td>21.3%</td>
-                                        <td>$16.34</td>
+                                        <td>003</td>
+                                        <td>Luis </td>
+                                        <td>Barca Hernández</td>
+                                        <td>45751201</td>
+                                        <td>02/09/2015</td>
+                                        <td>
+                                            <i class="fa fa-1x fa-search" style="color:green"></i>
+                                            <i class="fa fa-1x fa-briefcase" style="color:brown"></i>
+                                            <i class="fa fa-1x fa-pencil" style="color:orange"></i>
+                                            <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td>/blog.html</td>
-                                        <td>9516</td>
-                                        <td>89.3%</td>
-                                        <td>$1644.43</td>
+                                        <td>004</td>
+                                        <td>Juana </td>
+                                        <td>Vásquez Aguirre</td>
+                                        <td>36205401</td>
+                                        <td>05/09/2015</td>
+                                        <td>
+                                            <i class="fa fa-1x fa-search" style="color:green"></i>
+                                            <i class="fa fa-1x fa-briefcase" style="color:brown"></i>
+                                            <i class="fa fa-1x fa-pencil" style="color:orange"></i>
+                                            <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
+                                        </td>
                                     </tr>
                                     <tr>
-                                        <td>/404.html</td>
-                                        <td>23</td>
-                                        <td>34.3%</td>
-                                        <td>$23.52</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/services.html</td>
-                                        <td>421</td>
-                                        <td>60.3%</td>
-                                        <td>$724.32</td>
-                                    </tr>
-                                    <tr>
-                                        <td>/blog/post.html</td>
-                                        <td>1233</td>
-                                        <td>93.2%</td>
-                                        <td>$126.34</td>
+                                        <td>005</td>
+                                        <td>Carla </td>
+                                        <td>Rojas Gonzáles</td>
+                                        <td>78451236</td>
+                                        <td>10/10/2015 </td>
+                                        <td>
+                                            <i class="fa fa-1x fa-search" style="color:green"></i>
+                                            <i class="fa fa-1x fa-briefcase" style="color:brown"></i>
+                                            <i class="fa fa-1x fa-pencil" style="color:orange"></i>
+                                            <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
+                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                    </div>                    
+                    </div>
                 </div>
                 <!-- /.row -->
+
+
+
             </div>
             <!-- /.container-fluid -->
 
@@ -267,6 +374,20 @@
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
+
+    <!-- Morris Charts JavaScript -->
+    <!--<script src="js/plugins/morris/raphael.min.js"></script>
+    <script src="js/plugins/morris/morris.min.js"></script>
+    <script src="js/plugins/morris/morris-data.js"></script>
+    -->
+    <!-- Flot Charts JavaScript -->
+    <!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
+    <!--<script src="js/plugins/flot/jquery.flot.js"></script>
+    <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
+    <script src="js/plugins/flot/jquery.flot.resize.js"></script>
+    <script src="js/plugins/flot/jquery.flot.pie.js"></script>
+    <script src="js/plugins/flot/flot-data.js"></script>
+    -->
 
 </body>
 
