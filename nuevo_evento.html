@@ -1,0 +1,136 @@
+<!-- add_event.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Evento Nuevo</title>
+	<link rel="stylesheet" type="text/css" href="css/gestor-style.css">
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<script type="js/ut.js"></script>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+</head>
+<body class="font-face" style="background-color:#F6FFFF">
+	<div class="container div-main">
+		<!-- Semi Big Tittle -->
+		<div class="div_fill rounded-style" style="border-style:rounded">
+			<h1 class="lead text-center text-title">Evento Nuevo</h1>
+		</div>
+
+		<!-- Form part-->
+		<div class="div-form">
+			<form>
+				<div class="container">
+					<div class="row form-padding">
+						<div class="col-md-1 text-left">
+							<label>Título:</label>
+						</div>
+						<div class="col-md-11">
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						</div>
+					</div>
+					<div class="row form-padding">
+						<div class="col-md-1 text-left">
+							<label>Lugar:</label>
+						</div>
+						<div class="col-md-11">
+							<input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+						</div>
+					</div>
+				</div>
+			</form>
+			<div>
+				<div class="inputtext-right">
+					<div class="container">
+						<div class="row sub-form-padding">
+							<div class="col-md-6 text-left">
+								<label>Fecha del evento:</label>
+							</div>
+							<div class="col-md-6">
+								<input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+							</div>
+						</div>
+						<div class="row sub-form-padding">
+							<div class="col-md-6 text-left">
+								<label>Hora de inicio:</label>
+							</div>
+							<div class="col-md-6">
+								<input class="form-control" type="time" value="13:45:00" id="example-time-input">
+							</div>
+						</div>
+						<div class="row sub-form-padding">
+							<div class="col-md-6 text-left">
+								<label>Número máximo de asistentes:</label>
+							</div>
+							<div class="col-md-4"></div>
+							<div class="col-md-2">
+								<input class="form-control" type="number" value="42" id="example-number-input">
+							</div>
+						</div>
+						<div class="row sub-form-padding">
+							<div class="col-md-4 text-left">
+								<label>Imagen:</label>
+							</div>
+							<div class="col-md-8">
+								<input type="file" class="form-control-file" id="exampleInputFile" aria-describedby="fileHelp">
+								<small id="fileHelp" class="form-text text-muted">Por favor seleccione una imagen de presentación para el evento.</small>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="inputtext-left">
+					<div class="container">
+						<div class="row sub-form-padding">
+							<div class="col-md-6 text-left">
+								<label>Fecha límite de la inscripción:</label>
+							</div>
+							<div class="col-md-6">
+								<input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+							</div>
+						</div>
+						<div class="row sub-form-padding">
+							<div class="col-md-6 text-left">
+								<label>Hora de fin:</label>
+							</div>
+							<div class="col-md-6">
+								<input class="form-control" type="time" value="13:45:00" id="example-time-input">
+							</div>
+						</div>
+						<div class="row sub-form-padding">
+							<div class="col-md-6 text-left">
+								<label>Tema:</label>
+							</div>
+							<div class="col-md-6">
+								<select class="form-control" id="sel1">
+									<option></option>
+									<option>Tema1</option>
+									<option>Tema2</option>
+									<option>Tema3</option>
+									<option>Tema4</option>
+								</select>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="desc-div">
+				<div class="container form-group">
+					<div class="row form-padding">
+						<div class="col-md-1 text-left">
+							<label for="comment">Descripción:</label>
+						</div>
+						<div class="col-md-10">
+							<textarea class="form-control" rows="5" id="comment"></textarea>
+						</div>
+						<div class="col-md-1"></div>
+					</div>
+				</div>
+			</div>
+			<div class="wrapper">
+				<button type="button" class="btn btn-primary b-pos-abs">Guardar</button>
+				<button type="button" class="btn btn-secondary b-pos-abs">Cancelar</button>
+			</div>
+		</div>
+	</div>
+</body>
+
