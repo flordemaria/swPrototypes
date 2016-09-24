@@ -237,14 +237,14 @@
                                 <div class="col-lg-3 col-md-offset-1">
                                     <div class="form-group">
                                         <label>Clientes registrados entre: </label>
-                                        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                                        <input class="form-control" type="date" value="2016-09-23" id="example-date-input">
                                     </div>
                                 </div>
 
                                 <div class="col-lg-3">
                                     <div class="form-group">
                                         <label> &nbsp;</label>
-                                        <input class="form-control" type="date" value="2011-08-19" id="example-date-input">
+                                        <input class="form-control" type="date" value="2016-09-23" id="example-date-input">
                                     </div>
                                 </div>
 
@@ -293,9 +293,13 @@
                                         <td>45745632</td>
                                         <td>05/07/2015</td>
                                         <td>
-                                            <i class="fa fa-1x fa-search" style="color:green"></i>
-                                            <i class="fa fa-1x fa-briefcase" style="color:brown"></i>
-                                            <i class="fa fa-1x fa-pencil" style="color:orange"></i>
+                                            <a data-toggle="modal" data-target="#myModalInfo">
+                                                <i class="fa fa-1x fa-search" style="color:#006666"></i>
+                                            </a>
+                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            <a data-toggle="modal" data-target="#editarCliente">
+                                                <i class="fa fa-1x fa-pencil" style="color:#0e2451" ></i>
+                                            </a>
                                             <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
                                         </td>
                                     </tr>
@@ -306,9 +310,13 @@
                                         <td>&nbsp;&nbsp;&nbsp;--</td>
                                         <td>20/08/2015</td>
                                         <td>
-                                            <i class="fa fa-1x fa-search" style="color:green"></i>
-                                            <i class="fa fa-1x fa-briefcase" style="color:brown"></i>
-                                            <i class="fa fa-1x fa-pencil" style="color:orange"></i>
+                                            <a data-toggle="modal" data-target="#myModalInfo">
+                                                <i class="fa fa-1x fa-search" style="color:#006666"></i>
+                                            </a>
+                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            <a data-toggle="modal" data-target="#editarCliente">
+                                                <i class="fa fa-1x fa-pencil" style="color:#0e2451" ></i>
+                                            </a>
                                             <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
                                         </td>
                                     </tr>
@@ -319,9 +327,13 @@
                                         <td>45751201</td>
                                         <td>02/09/2015</td>
                                         <td>
-                                            <i class="fa fa-1x fa-search" style="color:green"></i>
-                                            <i class="fa fa-1x fa-briefcase" style="color:brown"></i>
-                                            <i class="fa fa-1x fa-pencil" style="color:orange"></i>
+                                            <a data-toggle="modal" data-target="#myModalInfo">
+                                                <i class="fa fa-1x fa-search" style="color:#006666"></i>
+                                            </a>
+                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            <a data-toggle="modal" data-target="#editarCliente">
+                                                <i class="fa fa-1x fa-pencil" style="color:#0e2451" ></i>
+                                            </a>
                                             <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
                                         </td>
                                     </tr>
@@ -332,9 +344,13 @@
                                         <td>36205401</td>
                                         <td>05/09/2015</td>
                                         <td>
-                                            <i class="fa fa-1x fa-search" style="color:green"></i>
-                                            <i class="fa fa-1x fa-briefcase" style="color:brown"></i>
-                                            <i class="fa fa-1x fa-pencil" style="color:orange"></i>
+                                            <a data-toggle="modal" data-target="#myModalInfo">
+                                                <i class="fa fa-1x fa-search" style="color:#006666"></i>
+                                            </a>
+                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            <a data-toggle="modal" data-target="#editarCliente">
+                                                <i class="fa fa-1x fa-pencil" style="color:#0e2451" ></i>
+                                            </a>
                                             <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
                                         </td>
                                     </tr>
@@ -345,9 +361,13 @@
                                         <td>78451236</td>
                                         <td>10/10/2015 </td>
                                         <td>
-                                            <i class="fa fa-1x fa-search" style="color:green"></i>
-                                            <i class="fa fa-1x fa-briefcase" style="color:brown"></i>
-                                            <i class="fa fa-1x fa-pencil" style="color:orange"></i>
+                                            <a data-toggle="modal" data-target="#myModalInfo">
+                                                <i class="fa fa-1x fa-search" style="color:#006666"></i>
+                                            </a>
+                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            <a data-toggle="modal" data-target="#editarCliente">
+                                                <i class="fa fa-1x fa-pencil" style="color:#0e2451" ></i>
+                                            </a>
                                             <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
                                         </td>
                                     </tr>
@@ -357,6 +377,14 @@
                     </div>
                 </div>
                 <!-- /.row -->
+
+                <!-- acciones -->
+                <div class="row" style="margin: 20px">
+                    <div class="col-md-4 col-md-offset-5">
+                        <a data-toggle="modal" data-target="#nuevoCliente"><i class="fa fa-3x fa-user" style="margin: 10px; color:#006666"></i></a>
+                        <a data-toggle="modal" data-target="#nuevosClientesExcel"><i class="fa fa-3x fa-file-text" style="margin: 10px; color:#006666"></i></a>
+                    </div>
+                </div>
 
 
 
@@ -368,6 +396,285 @@
 
     </div>
     <!-- /#wrapper -->
+
+
+    <div class="modal fade" id="myModalInfo" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title" id="myModalLabel">Cliente: &nbsp;&nbsp;Hugo Alvarez Cárdenas </h4>
+                    </div>
+                    <div class="modal-body">
+
+                        <div class="row">
+                            <div class="col-xs-5">
+                                <h4>Código: </h4>
+                            </div>
+                            <div class="col-xs-2">
+                                <h5>001</h5>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-xs-5">
+                                <h4>Edad: </h4>
+                            </div>
+                            <div class="col-xs-2">
+                                <h5>32</h5>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-xs-5">
+                                <h4>Fecha Nacimiento: </h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <h5>20/01/1994</h5>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-xs-5">
+                                <h4>Sexo: </h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <h5>Masculino</h5>
+                            </div>
+                        </div>
+
+                        <div class="row ">
+                            <div class="col-xs-5">
+                                <h4>Nivel Educativo </h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <h5>Secundaria Completa</h5>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-xs-5">
+                                <h4>N° Hijos:</h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <h5>0</h5>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-xs-5">
+                                <h4>Ocupación:</h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <h5>Estudiante</h5>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-xs-5">
+                                <h4>Domicilio: </h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <h5>Urb. Las Arenas 356</h5>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-xs-5">
+                                <h4>Correo:</h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <h5>Hugo15@hotmail.com</h5>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-xs-5">
+                                <h4>Teléfono:</h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <h5>95674581</h5>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- Modal: Editar Cliente-->
+        <div id="editarCliente" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Editar Cliente</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input class="form-control" value="Hugo">
+                        </div>
+                        <div class="form-group">
+                            <label>Apellido Paterno</label>
+                            <input class="form-control" value="Alvarez">
+                        </div>
+                        <div class="form-group">
+                            <label>Apellido Materno</label>
+                            <input class="form-control" value="Cárdenas">
+                        </div>
+                        <div class="form-group">
+                            <label>DNI</label>
+                            <input class="form-control" value="45745632">
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha Nacimiento</label>
+                            <input class="form-control" type="date" value="1994-01-20" id="example-date-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Sexo</label>
+                            <select id="select" class="form-control">
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Nivel Educativo</label>
+                            <input class="form-control" value="Secundaria Completa">
+                        </div>
+                        <div class="form-group">
+                            <label>N° Hijos</label>
+                            <input class="form-control" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label>Ocupación</label>
+                            <input class="form-control" value="Estudiante">
+                        </div>
+                        <div class="form-group">
+                            <label>Domicilio</label>
+                            <input class="form-control" value="Urb. Las Arenas 356">
+                        </div>
+                        <div class="form-group">
+                            <label>Correo</label>
+                            <input class="form-control" value="Hugo15@hotmail.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Teléfono</label>
+                            <input class="form-control" value="95674581">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal" >Guardar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: Nuevo Cliente-->
+        <div id="nuevoCliente" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Nuevo Cliente</h4>
+                    </div>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <label>Nombre</label>
+                            <input class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Apellido Paterno</label>
+                            <input class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Apellido Materno</label>
+                            <input class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>DNI</label>
+                            <input class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Fecha Nacimiento</label>
+                            <input class="form-control" type="date" value="1991-01-01" id="example-date-input">
+                        </div>
+                        <div class="form-group">
+                            <label>Sexo</label>
+                            <select id="select" class="form-control">
+                                <option>Masculino</option>
+                                <option>Femenino</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Nivel Educativo</label>
+                            <input class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>N° Hijos</label>
+                            <input class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Ocupación</label>
+                            <input class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Domicilio</label>
+                            <input class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Correo</label>
+                            <input class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Teléfono</label>
+                            <input class="form-control" value="">
+                        </div>
+
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-info" data-dismiss="modal" >Guardar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Modal: Nuevos CLientes-->
+        <div id="nuevosClientesExcel" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Nuevos Clientes</h4>
+                    </div>
+                    <div class="modal-body ">
+                        <p>Realiza una carga masiva de clientes subiendo un archivo de Excel.</p>
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Clientes.xlsx">
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Buscar</button>
+                            </span>
+                        </div>
+
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Descargar Plantilla</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Guardar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
 
     <!-- jQuery Version 1.11.0 -->
     <script src="js/jquery-1.11.0.js"></script>

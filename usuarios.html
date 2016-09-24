@@ -24,7 +24,7 @@
     <link href="css/plugins/morris.css" rel="stylesheet">
 
     <!-- Custom Fonts -->
-    <link href="font-awesome-4.1.0/css/font-awesome.css" rel="stylesheet" type="text/css"> 
+    <link href="font-awesome-4.1.0/css/font-awesome.css" rel="stylesheet" type="text/css">
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -170,11 +170,11 @@
                         <a href="tareas.html"><i class="fa fa-fw fa-check"></i> Tareas</a>
                     </li>
                     <li>
-                        <a href="notasA.html"><i class="fa fa-fw fa-pencil-square-o"></i> Notas Alumno</a>                 
-                    </li> 
+                        <a href="notasA.html"><i class="fa fa-fw fa-pencil-square-o"></i> Notas Alumno</a>
+                    </li>
                     <li>
                         <a href="notasP.html"><i class="fa fa-fw fa-pencil-square-o"></i> Notas Profesor</a>
-                    </li>                   
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -194,13 +194,13 @@
                 </div>
                 <!-- /.row -->
 
-                <!-- Formulario-->     
-                <div class="row">                  
+                <!-- Formulario-->
+                <div class="row">
                     <div class="col-lg-1"></div>
                     <div class="jumbotron col-lg-10">
                         <form role="form">
                             <div class="row">
-                                
+
                                 <div class="col-lg-3">
                                     <div class="form-group">
                                         <label>Nombre</label>
@@ -223,7 +223,7 @@
                                 </div>
 
                             </div>
-                            
+
                             <div class="row">
 
                                 <div class="col-lg-3">
@@ -257,15 +257,15 @@
                         </form>
 
                         <!--boton-->
-                        <div class="row">  
+                        <div class="row">
                             <div class="col-lg-2">
                                 <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Buscar
                                 </button>
                             </div>
                         </div>
 
-                    </div>                    
-                </div>                  
+                    </div>
+                </div>
                 <!-- /.row -->
 
                 <!-- Tabla -->
@@ -293,16 +293,16 @@
                                         <td>78451296</td>
                                         <td>Profesor</td>
                                         <td>
-                                            <i class="fa fa-1x fa-search" style="color:#006666"></i>
-                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
-                                            <i class="fa fa-1x fa-pencil" style="color:#0e2451"></i>
-                                            <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
+                                            <i class="fa fa-1x fa-search" style="color:#006666" data-toggle="modal" data-target="#verUsuario"></i>
+                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C" data-toggle="modal" data-target="#editarUsuario"></i>
+                                            <i class="fa fa-1x fa-pencil" style="color:#0e2451" data-toggle="modal" data-target="#editarUsuario"></i>
+                                            <i class="fa fa-1x fa-trash-o" style="color:grey" data-toggle="modal" data-target="#eliminarUsuario"></i>
                                         </td>
                                     </tr>
                                 </tbody>
                             </table>
                         </div>
-                    </div>                           
+                    </div>
                 </div>
                 <!-- /.row -->
 
@@ -376,13 +376,13 @@
                             </div>
                             <div class="modal-body ">
                                 <p>Realiza una carga masiva de alumnos subiendo un archivo de Excel.</p>
-                                <div class="input-group">                
+                                <div class="input-group">
                                     <input type="text" class="form-control" placeholder="Alumnos.xlsx">
                                     <span class="input-group-btn">
                                         <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Buscar</button>
                                     </span>
                                 </div>
-                                
+
                             </div>
                             <div class="modal-footer ">
                                 <button type="button" class="btn btn-info" data-dismiss="modal">Descargar Plantilla</button>
@@ -392,8 +392,115 @@
                         </div>
                     </div>
                 </div>
-                        
-            
+
+
+                <!-- Modal: Ver Usuario-->
+                <div id="verUsuario" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Ver Usuario</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="col-ln-4">
+                                    <label>Nombre y Apellidos</label>
+                                    <p class="form-control-static">Chiara Marinelli</p>
+                                </div>
+                                <div class="col-ln-2">
+                                    <label>DNI</label>
+                                    <p class="form-control-static">123123123</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Cargo</label>
+                                    <p class="form-control-static">Profesor</p>
+                                </div>
+                                <div class="form-group">
+                                    <label>Estado</label>
+                                    <p class="form-control-static">Activo</p>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info" data-dismiss="modal">Editar</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal: Editar Usuario-->
+                <div id="editarUsuario" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Editar Usuario</h4>
+                            </div>
+                            <div class="modal-body">
+                                <div class="form-group">
+                                    <label>Nombre</label>
+                                    <input class="form-control" placeholder="Chiara">
+                                </div>
+                                <div class="form-group">
+                                    <label>Apellido Paterno</label>
+                                    <input class="form-control" placeholder="Marinelli">
+                                </div>
+                                <div class="form-group">
+                                    <label>Apellido Materno</label>
+                                    <input class="form-control" placeholder="Marinelli">
+                                </div>
+                                <div class="form-group">
+                                    <label>DNI</label>
+                                    <input class="form-control" placeholder="123123123">
+                                </div>
+                                <div class="form-group">
+                                    <label>Cargo</label>
+                                    <select id="select" class="form-control">
+                                        <option>Voluntario</option>
+                                        <option>Alumno</option>
+                                        <option>Adjunto</option>
+                                        <option selected="true">Profesor</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label>Estado</label>
+                                    <select id="select" class="form-control">
+                                        <option selected="true">Activo</option>
+                                        <option>Inactivo</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info" data-dismiss="modal">Guardar</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Modal: Eliminar Usuarios-->
+                <div id="eliminarUsuario" class="modal fade" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                <h4 class="modal-title">Eliminar Usuario</h4>
+                            </div>
+                            <div class="modal-body ">
+                                <p>Eliminara el usuario de Chiara Marinelli. Esta seguro?</p>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-info" data-dismiss="modal">Si</button>
+                                <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
 
             </div>
             <!-- /.container-fluid -->
