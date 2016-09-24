@@ -177,9 +177,9 @@
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
+        <div id="page-wrapper" style="border:50px;">
 
-            <div class="container-fluid">
+            <div class="container-fluid" style="padding: 0px;">
 
                 <!-- Page Heading -->
                 <div class="row">
@@ -281,31 +281,34 @@
 
            
 
-        <div class="row">
-            <div class="col-md-12">
-                <div class="pull-right">
-                    <label>Nota Final</label>    
-                    <div class="input-group col-md-12">                
-                        <input type="text" class="form-control">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="pull-right">
+                        <label>Nota Final</label>    
+                        <div class="input-group col-md-12">                
+                            <input type="text" class="form-control">
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-
-        <label>Reclamo </label>    
-        <div class="input-group">                
-            <input type="text" class="form-control" readonly="true">
-        </div>
-
-            <label>Respuesta al reclamo </label>    
-            <div class="input-group">                
-                <input type="text" class="form-control">
-                <span class="input-group-btn">
-                    <button class="btn btn-default" type="button">Enviar</button>
-                </span>
+            <div class="row" style="margin: 20px;">            
             </div>
 
+            <div class="jumbotron">
+                <label>Reclamo </label>    
+                <div class="input-group">                
+                    <input type="text" class="form-control" readonly="true">
+                </div>
+
+                <label>Respuesta al reclamo </label>    
+                <div class="input-group">                
+                    <input type="text" class="form-control">
+                    <span class="input-group-btn">
+                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Enviar</button>
+                    </span>
+                </div>
+            </div>    
 
         </div>
         <!-- /#page-wrapper -->
