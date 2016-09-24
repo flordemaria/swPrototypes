@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <title>Invisibles - Clínicas</title>
-
+    <!-- jQuery Version 1.11.0 -->
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
     <!-- Font: Lato -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
@@ -26,7 +27,7 @@
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
-    <script src="js/bootstrap.js"></script>
+    <script src="js/clinica_form.js"></script>
 
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
@@ -47,23 +48,7 @@
                     </div>
                     <div class="modal-body">
                         <div>
-                            <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-
-Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
-
-Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.
-
-Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.
-
-Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.
+                            <p>Aquí va la descripción de la clínica seleccionada que aparecerá en el landing cuando se abra.
                             </p>
                         </div>
                         <div class="row">
@@ -95,7 +80,7 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
                             <form>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Nombre</label>
-                                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa el nombre">
+                                    <input type="email" class="form-control" id="nombreClinica" aria-describedby="emailHelp" placeholder="Ingresa el nombre">
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleInputEmail1">Horario de atención</label>
@@ -104,26 +89,26 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
                                             <label>De</label>
                                         </div>
                                         <div class="col-xs-3">
-                                            <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa el nombre">
+                                            <input type="time" class="form-control" id="hIni" aria-describedby="emailHelp" placeholder="Ingresa el nombre">
                                         </div>
                                         <div class="col-xs-3" style="padding-top: 5px">
                                             <label>Hasta</label>
                                         </div>
                                         <div class="col-xs-3">
-                                            <input type="time" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Ingresa el nombre">
+                                            <input type="time" class="form-control" id="hFin" aria-describedby="emailHelp" placeholder="Ingresa el nombre">
                                         </div>
                                     </div>
                                 </div>
                                 <div class="form-group">
                                     <label for="exampleTextarea">Descripción</label>
-                                    <textarea class="form-control" id="exampleTextarea" rows="3"></textarea>
+                                    <textarea class="form-control" id="desc" rows="3"></textarea>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Guardar cambios</button>
+                        <button type="button" id="btnAdd" class="btn btn-primary" data-dismiss="modal">Guardar cambios</button>
                     </div>
                 </div>
             </div>
@@ -168,7 +153,7 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
                     </div>
                     <div class="modal-footer">
                         <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
-                        <button type="button" class="btn btn-primary">Guardar cambios</button>
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Guardar cambios</button>
                     </div>
                 </div>
             </div>
@@ -340,7 +325,7 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
                         <button class="btn btn-info" data-toggle="modal" data-target="#myModal">Agregar</button>
                     </div>
                     <div class="table-responsive">
-                        <table class="table table-hover">
+                        <table id="tbClinica" class="table table-hover">
                             <thead>
                                 <tr>
                                     <th>Clínica</th>
@@ -352,35 +337,33 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
                             <tbody>
                                 <tr>
                                     <td>Derechos Humanos</td>
-                                    <td>9:00am - 4:00pm</td>
+                                    <td>9:00 - 16:00</td>
                                     <td>32.3%</td>
                                     <td>
-                                        <a data-toggle="modal" data-target="#myModalInfo">
-                                        <i class="fa fa-1x fa-search"></i>
-                                        </a>
-                                        <a data-toggle="modal" data-target="#myModalEdit">
-                                            <i class="fa fa-1x fa-pencil"></i>
-                                        </a>
-                                        <i class="fa fa-1x fa-trash-o"></i>
+                                        <a data-toggle="modal" data-target="#myModalInfo"><i class="fa fa-1x fa-search"></i></a>
+                                        <a data-toggle="modal" data-target="#myModalEdit"><i class="fa fa-1x fa-pencil"></i></a>
+                                        <a class="btnDelete"><i class="fa fa-1x fa-trash-o"></i></a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Derecho a la Identidad</td>
-                                    <td>9:00am - 4:00pm</td>
+                                    <td>9:00 - 16:00</td>
                                     <td>33.3%</td>
                                     <td>
                                         <a data-toggle="modal" data-target="#myModalInfo">
                                         <i class="fa fa-1x fa-search"></i>
                                         </a>
                                         <a data-toggle="modal" data-target="#myModalEdit">
-                                            <i class="fa fa-1x fa-pencil"></i>
+                                            <i class="fa fa-1x fa-pencil" style="color:orange"></i>
                                         </a>   
-                                        <i class="fa fa-1x fa-trash-o"></i>
+                                        <a class="btnDelete">
+                                            <i class="fa fa-1x fa-trash-o"></i>
+                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Derecho Ambiental</td>
-                                    <td>9:00am - 4:00pm</td>
+                                    <td>9:00 - 16:00</td>
                                     <td>21.3%</td>
                                     <td>
                                         <a data-toggle="modal" data-target="#myModalInfo">
@@ -389,12 +372,14 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
                                         <a data-toggle="modal" data-target="#myModalEdit">
                                             <i class="fa fa-1x fa-pencil"></i>
                                         </a>  
-                                        <i class="fa fa-1x fa-trash-o"></i>
+                                        <a class="btnDelete">
+                                            <i class="fa fa-1x fa-trash-o"></i>
+                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Derecho Penal</td>
-                                    <td>9:00am - 4:00pm</td>
+                                    <td>9:00 - 16:00</td>
                                     <td>89.3%</td>
                                     <td>
                                         <a data-toggle="modal" data-target="#myModalInfo">
@@ -403,12 +388,14 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
                                         <a data-toggle="modal" data-target="#myModalEdit">
                                             <i class="fa fa-1x fa-pencil"></i>
                                         </a>
-                                        <i class="fa fa-1x fa-trash-o"></i>
+                                        <a class="btnDelete">
+                                            <i class="fa fa-1x fa-trash-o"></i>
+                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Derechos Indígenas</td>
-                                    <td>9:00am - 4:00pm</td>
+                                    <td>9:00 - 16:00</td>
                                     <td>34.3%</td>
                                     <td>
                                         <a data-toggle="modal" data-target="#myModalInfo">
@@ -417,12 +404,14 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
                                         <a data-toggle="modal" data-target="#myModalEdit">
                                             <i class="fa fa-1x fa-pencil"></i>
                                         </a>   
-                                        <i class="fa fa-1x fa-trash-o"></i>
+                                        <a class="btnDelete">
+                                            <i class="fa fa-1x fa-trash-o"></i>
+                                        </a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td>Acceso a la Información Pública</td>
-                                    <td>9:00am - 4:00pm</td>
+                                    <td>9:00 - 16:00</td>
                                     <td>60.3%</td>
                                     <td>
                                         <a data-toggle="modal" data-target="#myModalInfo">
@@ -431,7 +420,9 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
                                         <a data-toggle="modal" data-target="#myModalEdit">
                                             <i class="fa fa-1x fa-pencil"></i>
                                         </a>  
-                                        <i class="fa fa-1x fa-trash-o"></i>
+                                        <a class="btnDelete">
+                                            <i class="fa fa-1x fa-trash-o"></i>
+                                        </a>
                                     </td>
                                 </tr>
                             </tbody>
@@ -450,8 +441,7 @@ Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, ve
 </div>
 <!-- /#wrapper -->
 
-<!-- jQuery Version 1.11.0 -->
-<script src="js/jquery-1.11.0.js"></script>
+
 
 <!-- Bootstrap Core JavaScript -->
 <script src="js/bootstrap.min.js"></script>

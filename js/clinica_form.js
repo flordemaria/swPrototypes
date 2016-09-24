@@ -1,25 +1,23 @@
-// Get the modal
-var modal = document.getElementById('myModal');
+$(document).ready(function(){
+	$("#tbClinica").on('click','.btnDelete',function(){
+		$(this).closest('tr').remove();
+	});
 
-// Get the button that opens the modal
-var btn = document.getElementById("myBtn");
-
-// Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
-
-// When the user clicks the button, open the modal
-btn.onclick = function() {
-    modal.style.display = "block";
-}
-
-// When the user clicks on <span> (x), close the modal
-span.onclick = function() {
-    modal.style.display = "none";
-}
-
-// When the user clicks anywhere outside of the modal, close it
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+	$("#btnAdd").on('click',function(){
+		var nombre = document.getElementById("nombreClinica").value.toString();
+		var hInicio = document.getElementById("hIni").value.toString();
+		var hFin = document.getElementById("hFin").value.toString();
+		var desc = document.getElementById("desc").value.toString();
+		var newRow = "<tr>"
+						+"<td>"+nombre+"</td>"
+						+"<td>"+hInicio+"-"+hFin+"</td>"
+						+"<td>33.10%</td>"
+						+"<td>"
+							+"<a data-toggle='modal' data-target='#myModalInfo' style='padding-right:2px'><i class='fa fa-1x fa-search'></i></a>"
+							+"<a data-toggle='modal' data-target='#myModalEdit' style='padding-right:2px'><i class='fa fa-1x fa-pencil'></i></a>"
+							+"<a class='btnDelete'><i class='fa fa-1x fa-trash-o' style='padding-right:2px'></i></a>"
+						+"</td>"
+						+"</tr>";
+		$("#tbClinica").append(newRow);
+	});
+});
