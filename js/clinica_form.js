@@ -13,11 +13,20 @@ $(document).ready(function(){
 						+"<td>"+hInicio+"-"+hFin+"</td>"
 						+"<td>33.10%</td>"
 						+"<td>"
-							+"<a data-toggle='modal' data-target='#myModalInfo' style='padding-right:2px'><i class='fa fa-1x fa-search'></i></a>"
-							+"<a data-toggle='modal' data-target='#myModalEdit' style='padding-right:2px'><i class='fa fa-1x fa-pencil'></i></a>"
-							+"<a class='btnDelete'><i class='fa fa-1x fa-trash-o' style='padding-right:2px'></i></a>"
+							+"<a data-toggle='modal' data-target='#myModalInfo' style='padding-right:2px'><i class='fa fa-1x fa-search' style='color:#006666'></i></a>"
+							+"<a data-toggle='modal' data-target='#myModalEdit' style='padding-right:2px'><i class='fa fa-1x fa-pencil' style='color:#0e2451'></i></a>"
+							+"<a class='btnDelete'><i class='fa fa-1x fa-trash-o' style='color:grey'></i></a>"
 						+"</td>"
 						+"</tr>";
 		$("#tbClinica").append(newRow);
 	});
+
+	$("#tbClinica").on('click','.btnInfo',function(){
+		var x = $(this).closest('tr');
+		
+		console.log(x);
+		document.getElementById('horario_info').innerHTML = "asdasdas";
+	});
+
+	
 });
