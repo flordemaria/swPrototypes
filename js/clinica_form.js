@@ -22,11 +22,10 @@ $(document).ready(function(){
 	});
 
 	$("#tbClinica").on('click','.btnInfo',function(){
-		var x = $(this).closest('tr');
-		
-		console.log(x);
-		document.getElementById('horario_info').innerHTML = "asdasdas";
+		var $row = $(this).closest('tr'), $tds = $row.find("td");
+		var nombre = $tds[0].innerText;
+		var horario = $tds[1].innerText;
+		document.getElementById('info_modal').innerHTML = nombre;
+		document.getElementById('horario_info').innerHTML = horario;
 	});
-
-	
 });
