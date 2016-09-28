@@ -26,13 +26,23 @@
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
 
+    <!--  jQuery -->
+    <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+
+    <!-- Isolated Version of Bootstrap, not needed if your site already uses Bootstrap -->
+    <link rel="stylesheet" href="https://formden.com/static/cdn/bootstrap-iso.css" />
+
+    <!-- Bootstrap Date-Picker Plugin -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="js/clinica_form.js"></script>
 </head>
 
 <body>
@@ -237,14 +247,26 @@
                                 <div class="col-lg-3 col-md-offset-1">
                                     <div class="form-group">
                                         <label>Clientes registrados entre: </label>
-                                        <input class="form-control" type="date" value="2016-09-23" id="example-date-input">
+                                        <div class="input-group">
+                                            <input class="form-control" id="date" name="date_cliente" placeholder="DD/MM/YYYY" type="text"/>
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar">
+                                                </i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-3">
                                     <div class="form-group">
                                         <label> &nbsp;</label>
-                                        <input class="form-control" type="date" value="2016-09-23" id="example-date-input">
+                                        <div class="input-group">
+                                            <input class="form-control" id="date" name="date_cliente" placeholder="DD/MM/YYYY" type="text"/>
+                                            <div class="input-group-addon">
+                                                <i class="fa fa-calendar">
+                                                </i>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
 
