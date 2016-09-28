@@ -171,7 +171,7 @@
                     </li> 
                     <li class="active">
                         <a href="notasP.html"><i class="fa fa-fw fa-pencil-square-o"></i> Notas Profesor</a>
-                    </li>                    
+                    </li>                    r
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -195,12 +195,14 @@
                     <table class="table table-bordered table-hover table-striped">
                         <col style="width:5%">
                         <col style="width:45%">
+                        <col style="width:5%">
                         <col style="width:40%">
                         <col style="width:10%">
                         <thead>
                             <tr>
                                 <th align="center">Número</th>
                                 <th>Criterios</th>
+                                <th align="center">Puntos</th>
                                 <th>Observaciones</th>
                                 <th>Puntaje</th>
                             </tr>
@@ -208,7 +210,8 @@
                         <tbody>
                             <tr>
                                 <td align="center">1</td>
-                                <td>Trabajo en grupo en el consultorio (2 ptos.)</td>
+                                <td>Trabajo en grupo en el consultorio</td>
+                                <td align="center">2</td>
                                 <td align="center"><div contenteditable></td>
                                 <td><div contenteditable></td>
                             </tr>                                    
@@ -216,7 +219,8 @@
                         <tbody>
                             <tr>
                                 <td align="center">2</td>
-                                <td>Actitud frente al trabajo y atención del cliente (2 ptos.)</td>
+                                <td>Actitud frente al trabajo y atención del cliente</td>
+                                <td align="center">2</td>
                                 <td align="center"><div contenteditable></td>
                                 <td><div contenteditable></td>
                             </tr>                                    
@@ -224,7 +228,8 @@
                         <tbody>
                             <tr>
                                 <td align="center">3</td>
-                                <td>Calidad de la información brindada (4 ptos.)</td>
+                                <td>Calidad de la información brindada</td>
+                                <td align="center">4</td>
                                 <td align="center"><div contenteditable></td>
                                 <td><div contenteditable></td>
                             </tr>                                    
@@ -232,7 +237,8 @@
                         <tbody>
                             <tr>
                                 <td align="center">4</td>
-                                <td>Capacidad de informar a través del discurso (4 ptos.)</td>
+                                <td>Capacidad de informar a través del discurso</td>
+                                <td align="center">4</td>
                                 <td align="center"><div contenteditable></td>
                                 <td><div contenteditable></td>
                             </tr>                                    
@@ -245,7 +251,8 @@
                         <tbody>
                             <tr>
                                 <td align="center">5</td>
-                                <td>Comunicación con el cliente (2 pts)</td>
+                                <td>Comunicación con el cliente</td>
+                                <td align="center">2</td>
                                 <td align="center"><div contenteditable></td>
                                 <td><div contenteditable></td>
                             </tr>                                    
@@ -253,7 +260,8 @@
                         <tbody>
                             <tr>
                                 <td align="center">6</td>
-                                <td>Actuaciones y seguimiento de casos (3 ptos.)</td>
+                                <td>Actuaciones y seguimiento de casos</td>
+                                <td align="center">3</td>
                                 <td align="center"><div contenteditable></td>
                                 <td><div contenteditable></td>
                             </tr>                                    
@@ -261,7 +269,8 @@
                         <tbody>
                             <tr>
                                 <td align="center">7</td>
-                                <td>Trabajo coordinado con el resto de la clase (1 pto.)</td>
+                                <td>Trabajo coordinado con el resto de la clase</td>
+                                <td align="center">1</td>
                                 <td align="center"><div contenteditable></td>
                                 <td><div contenteditable></td>
                             </tr>                                    
@@ -269,7 +278,8 @@
                         <tbody>
                             <tr>
                                 <td align="center">8</td>
-                                <td>Llenado de la base de datos (2 ptos.)</td>
+                                <td>Llenado de la base de datos</td>
+                                <td align="center">2</td>
                                 <td align="center"><div contenteditable></td>
                                 <td><div contenteditable></td>
                             </tr>                                    
@@ -285,8 +295,12 @@
                 <div class="col-md-12">
                     <div class="pull-right">
                         <label>Nota Final</label>    
-                        <div class="input-group col-md-12">                
-                            <input type="text" class="form-control">
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control" readonly="true">
+                        </div>
+                        <label>Puntaje Extra</label>    
+                        <div class="input-group col-md-6">
+                            <input type="text" class="form-control pull-right">
                         </div>
                     </div>
                 </div>
@@ -297,15 +311,15 @@
 
             <div class="jumbotron">
                 <label>Reclamo </label>    
-                <div class="input-group">                
-                    <input type="text" class="form-control" readonly="true">
+                <div class="form-group">                
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
                 </div>
 
                 <label>Respuesta al reclamo </label>    
-                <div class="input-group">                
-                    <input type="text" class="form-control">
+                <div class="form-group">                
+                    <textarea class="form-control" rows="5" id="comment"></textarea>
                     <span class="input-group-btn">
-                        <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Enviar</button>
+                        <button type="button" class="btn btn-info pull-right" data-toggle="modal" data-target="#myModal">Enviar</button>
                     </span>
                 </div>
             </div>    
