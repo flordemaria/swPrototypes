@@ -180,6 +180,9 @@
                         <a href="tareas.html"><i class="fa fa-fw fa-check"></i> Tareas</a>
                     </li>
                     <li>
+                        <a href="pendientes.html"><i class="fa fa-thumb-tack"></i> Pendientes</a>
+                    </li>
+                    <li>
                         <a href="notasA.html"><i class="fa fa-fw fa-pencil-square-o"></i> Notas Alumno</a>
                     </li>
                     <li>
@@ -318,8 +321,10 @@
                                             <a data-toggle="modal" data-target="#myModalInfo">
                                                 <i class="fa fa-1x fa-search" style="color:#006666"></i>
                                             </a>
-                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
-                                            <a data-toggle="modal" data-target="#editarCliente">
+											<a data-toggle="modal" data-target="#asignarCaso">
+												<i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            </a>
+											<a data-toggle="modal" data-target="#editarCliente">
                                                 <i class="fa fa-1x fa-pencil" style="color:#0e2451" ></i>
                                             </a>
                                             <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
@@ -335,7 +340,9 @@
                                             <a data-toggle="modal" data-target="#myModalInfo">
                                                 <i class="fa fa-1x fa-search" style="color:#006666"></i>
                                             </a>
-                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            <a data-toggle="modal" data-target="#asignarCaso">
+												<i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            </a>
                                             <a data-toggle="modal" data-target="#editarCliente">
                                                 <i class="fa fa-1x fa-pencil" style="color:#0e2451" ></i>
                                             </a>
@@ -352,7 +359,9 @@
                                             <a data-toggle="modal" data-target="#myModalInfo">
                                                 <i class="fa fa-1x fa-search" style="color:#006666"></i>
                                             </a>
-                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            <a data-toggle="modal" data-target="#asignarCaso">
+												<i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            </a>
                                             <a data-toggle="modal" data-target="#editarCliente">
                                                 <i class="fa fa-1x fa-pencil" style="color:#0e2451" ></i>
                                             </a>
@@ -369,7 +378,9 @@
                                             <a data-toggle="modal" data-target="#myModalInfo">
                                                 <i class="fa fa-1x fa-search" style="color:#006666"></i>
                                             </a>
-                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            <a data-toggle="modal" data-target="#asignarCaso">
+												<i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            </a>
                                             <a data-toggle="modal" data-target="#editarCliente">
                                                 <i class="fa fa-1x fa-pencil" style="color:#0e2451" ></i>
                                             </a>
@@ -386,7 +397,9 @@
                                             <a data-toggle="modal" data-target="#myModalInfo">
                                                 <i class="fa fa-1x fa-search" style="color:#006666"></i>
                                             </a>
-                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            <a data-toggle="modal" data-target="#asignarCaso">
+												<i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
+                                            </a>
                                             <a data-toggle="modal" data-target="#editarCliente">
                                                 <i class="fa fa-1x fa-pencil" style="color:#0e2451" ></i>
                                             </a>
@@ -491,6 +504,14 @@
                         </div>
                         <div class="row ">
                             <div class="col-xs-5">
+                                <h4>Población vulnerable:</h4>
+                            </div>
+                            <div class="col-xs-4">
+                                <h5></h5>
+                            </div>
+                        </div>
+                        <div class="row ">
+                            <div class="col-xs-5">
                                 <h4>Domicilio: </h4>
                             </div>
                             <div class="col-xs-4">
@@ -571,6 +592,10 @@
                         <div class="form-group">
                             <label>Ocupación</label>
                             <input class="form-control" value="Estudiante">
+                        </div>     
+                        <div class="form-group">
+                            <label>Población vulnerable</label>
+                            <input class="form-control" value="">
                         </div>
                         <div class="form-group">
                             <label>Domicilio</label>
@@ -605,15 +630,15 @@
                     </div>
                     <div class="modal-body">
                         <div class="form-group">
-                            <label>Nombre</label>
+                            <label>Nombre*</label>
                             <input class="form-control" value="">
                         </div>
                         <div class="form-group">
-                            <label>Apellido Paterno</label>
+                            <label>Apellido Paterno*</label>
                             <input class="form-control" value="">
                         </div>
                         <div class="form-group">
-                            <label>Apellido Materno</label>
+                            <label>Apellido Materno*</label>
                             <input class="form-control" value="">
                         </div>
                         <div class="form-group">
@@ -641,6 +666,10 @@
                         </div>
                         <div class="form-group">
                             <label>Ocupación</label>
+                            <input class="form-control" value="">
+                        </div>
+                        <div class="form-group">
+                            <label>Población Vulnerable*</label>
                             <input class="form-control" value="">
                         </div>
                         <div class="form-group">
@@ -693,7 +722,69 @@
             </div>
         </div>
 
-
+		<!-- Modal: asignar caso-->
+        <div id="asignarCaso" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Nuevo Caso</h4>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="form-group">
+                            <label>Nombre del cliente</label>
+                            <input class="form-control" value="" readonly="true">
+                        </div>
+						<div class="form-group">
+                            <label>Tipo de consulta</label>
+                            <select id="select" class="form-control">
+                                <option>Ausencia de Registro</option>
+                                <option>Registro extemporáneo de DNI</option>
+								<option>Rectificación de Datos en DNI</option>
+                                <option>Rectificación de Datos en Partida de Nacimiento</option>
+								<option>Cancelación de Partida de Nacimiento</option>
+                                <option>Derecho al Nombre</option>
+								<option>Otros (indicar abajo)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <input class="form-control" value="" readonly="true">
+                        </div>
+						<div class="form-group">
+                            <label>Tipo de actuación</label>
+                            <select id="select" class="form-control">
+                                <option>Orientación</option>
+                                <option>Asesoría Jurídica</option>
+								<option>Otros (indicar abajo)</option>
+                            </select>							
+                        </div>
+                        <div class="form-group">
+				            <input class="form-control" value="" readonly="true">
+						</div>
+						<div class="form-group">
+                            <label>Observaciones del caso</label>
+                            <textarea class="form-control" rows="5" id="comment"></textarea>
+                        </div>
+						<div class="form-group">
+                            <label>Documentos entregados</label>                            
+                            <div class="input-group">
+                                <input class="form-control" id="documento" name="documento_entregado" type="text"/>
+                                <div class="input-group-addon">
+                                    <i class="fa fa-upload"></i>
+                                </div>
+                            </div>
+							    
+							<a> Más </a>
+                        </div>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Enviar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
 
 
 

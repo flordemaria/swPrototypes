@@ -9,7 +9,7 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>Invisibles - Casos</title>
+    <title>Invisibles - Pendientes</title>
 
     <!-- Font: Lato -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
@@ -17,24 +17,14 @@
     <!-- Bootstrap Core CSS -->
     <link href="css/bootstrap.css" rel="stylesheet">
 
-    <link href="css/datepicker.css" rel="stylesheet">
-
     <!-- Custom CSS -->
     <link href="css/sb-admin.css" rel="stylesheet">
 
     <!-- Morris Charts CSS -->
-    <link href="css/plugins/morris.css" rel="stylesheet">
+    <!--<link href="css/plugins/morris.css" rel="stylesheet">-->
 
     <!-- Custom Fonts -->
     <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-
-    <!-- jQuery Version 1.11.0 -->
-    <script src="js/jquery-1.11.0.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/clinica_form.js"></script>
-    <script src="js/bootstrap-datepicker.js"></script>
 
     <!--  jQuery -->
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
@@ -46,15 +36,13 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.4.1/css/bootstrap-datepicker3.css"/>
 
-
-
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
         <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
-
+    <script src="js/clinica_form.js"></script>
 </head>
 
 <body>
@@ -185,13 +173,13 @@
                     <li>
                         <a href="clientes.html"><i class="fa fa-fw fa-user"></i> Clientes</a>
                     </li>
-                    <li class="active">
+                    <li>
                         <a href="casos.html"><i class="fa fa-fw fa-suitcase"></i> Casos</a>
                     </li>
                     <li>
                         <a href="tareas.html"><i class="fa fa-fw fa-check"></i> Tareas</a>
                     </li>
-                    <li>
+                    <li class="active">
                         <a href="pendientes.html"><i class="fa fa-thumb-tack"></i> Pendientes</a>
                     </li>
                     <li>
@@ -205,176 +193,212 @@
             <!-- /.navbar-collapse -->
         </nav>
 
-        <div id="page-wrapper">
+            
+    
+    <div id="page-wrapper">
 
-            <div class="container-fluid">
+        <div class="container-fluid">
 
-                <!-- Page Heading -->
-                <div class="row">
-                    <div class="col-lg-12">
-                        <h1 class="page-header">
-                            Casos
-                        </h1>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-                <!-- Formulario-->
-                <div class="row">
-
-                    <div class="col-lg-1"></div>
-                    <div class="jumbotron col-lg-10">
-                        <form role="form">
-
-                            <div class="row">
-
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label>Nombre de caso</label>
-                                        <input class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-6">
-                                    <div class="form-group">
-                                        <label>Nombre del cliente</label>
-                                        <input class="form-control">
-                                    </div>
-                                </div>
-
-                                <div class="col-lg-2">
-                                    <div class="form-group">
-                                        <label>DNI</label>
-                                        <input class="form-control">
-                                    </div>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-
-                                <div class="col-lg-3">
-                                    <label>Casos registrados entre:</label>
-                                </div>
-
-                            </div>
-
-                            <div class="row">
-
-                                <div class="col-lg-3">
-
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-calendar">
-                                                </i>
-                                            </div>
-                                        </div>  
-                                    </div>
-
-                                </div>
-
-                                <div class="col-lg-3">
-                                    <div class="form-group">
-                                        <div class="input-group">
-                                            <input class="form-control" id="date" name="date" placeholder="DD/MM/YYYY" type="text"/>
-                                            <div class="input-group-addon">
-                                                <i class="fa fa-calendar">
-                                                </i>
-                                            </div>
-                                        </div>  
-                                    </div>
-                                </div>
-
-                            </div>
+            <!-- Page Heading -->
+            <div class="row">
 
 
-                        </form>
-
-                        <!--boton-->
-                        <div class="row">
-                            <div class="col-lg-2">
-                                <button type="button" class="btn btn-info" data-toggle="modal" data-target="#myModal">Buscar
-                                </button>
-                            </div>
+                <div class="col-lg-12">
+                    <h1 class="page-header">
+                        Fichas Pendientes                        
+                    </h1>
+                    <br><br>
+                    <div id="clinica_form" class="modal">
+                        <div class="modal-content">
+                            <span class="close">x</span>
+                            <p>Some text in the Modal..</p>
                         </div>
+                    </div>                    
+                    <div class="table-responsive">
+                        <table id="tbClinica" class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Caso</th>
+                                    <th>Código</th>
+                                    <th>Responsable</th>              
+                                    <th>Fecha Registro</th>
+                                    <th>Acciones</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>1542</td>
+                                    <td>Cancelación de partida</td>
+                                    <td>20114581</td>
+                                    <td>Juan Valdez</td>
+                                    <td>20/09/2016</td>
+                                    <td>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a data-toggle="modal" data-target="#verCaso">
+                                            <i class="fa fa-1x fa-search" style="color:#006666"></i>
+                                        </a>                                        
+                                        <a class="btnDelete">
+                                        <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
+                                    </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1550</td>
+                                    <td>Ausencia de Registro</td>
+                                    <td>20102024</td>
+                                    <td>Enrique Juarez</td>
+                                    <td>22/09/2016</td>
+                                    <td>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a data-toggle="modal" data-target="#verCaso">
+                                            <i class="fa fa-1x fa-search" style="color:#006666"></i>
+                                        </a>
+                                        <a class="btnDelete">
+                                        <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
+                                    </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1551</td>
+                                    <td>Registro extemporáneo de DNI</td>
+                                    <td>20153025</td>
+                                    <td>Daniela Loza</td>
+                                    <td>22/09/2016</td>
+                                    <td>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a data-toggle="modal" data-target="#verCaso">
+                                            <i class="fa fa-1x fa-search" style="color:#006666"></i>
+                                        </a>
+                                        <a class="btnDelete">
+                                        <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
+                                    </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1560</td>
+                                    <td>Derecho al Nombre</td>
+                                    <td>20142526</td>
+                                    <td>Jimena Arias </td>  
+                                    <td>24/09/2016</td>
+                                    <td>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a data-toggle="modal" data-target="#verCaso">
+                                            <i class="fa fa-1x fa-search" style="color:#006666"></i>
+                                        </a>
+                                        <a class="btnDelete">
+                                        <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
+                                    </a>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>1562</td>
+                                    <td>Rectificación de Datos en DNI</td>
+                                    <td>20145481</td>
+                                    <td>Luisa Aguirre </td>
+                                    <td>28/09/2016 </td>
+                                    <td>
+                                        &nbsp;&nbsp;&nbsp;&nbsp;
+                                        <a data-toggle="modal" data-target="#verCaso">
+                                            <i class="fa fa-1x fa-search" style="color:#006666"></i>
+                                        </a>
+                                        <a class="btnDelete">
+                                        <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
+                                    </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
-                <!-- /.row -->
-
-                <!-- Tabla -->                
-                <div class="row">
-                    <!-- Margen -->
-                    <div class="col-lg-1"></div>
-
-                    <div class="col-lg-10">
-                        <h1></h1>
-                        <a href="#" class="btn btn-order">Filtrar por</a>
-                            <a href="#" class="btn btn-order dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
-                            <ul class="dropdown-menu">
-                                <li><a href="#">Mis casos</a></li>
-                                <li><a href="#">Estado</a></li>
-                                <li><a href="#">Cliente</a></li>
-                            </ul>                      
-                        <div class="table-responsive">
-                            <table class="table table-hover">
-                                <thead>
-                                    <tr>
-                                        <th>Codigo</th>
-                                        <th>Caso</th>
-                                        <th>Cliente</th>
-                                        <th>Alumno Asignado</th>
-                                        <th>Fecha Registro</th>
-                                        <th>Acciones</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td>001</td>
-                                        <td>Ollanta-DNI</td>
-                                        <td>Sr. Ollanta Humala</td>
-                                        <td>Ela Lumno</td>
-                                        <td>08/09/2016</td>
-                                        <td>
-                                           <i class="fa fa-1x fa-search" style="color:#006666"></i>
-                                            <i class="fa fa-1x fa-briefcase" style="color:#B3AB1C"></i>
-                                            <i class="fa fa-1x fa-pencil" style="color:#0e2451"></i>
-                                            <i class="fa fa-1x fa-trash-o" style="color:grey"></i>
-                                        </td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-                <!-- /.row -->
-
-
-
             </div>
-            <!-- /.container-fluid -->
+            <!-- /.row -->
 
         </div>
-        <!-- /#page-wrapper -->
+        <!-- /.container-fluid -->
+
+    </div>
+    <!-- /#page-wrapper -->
+        
+        
+    
 
     </div>
     <!-- /#wrapper -->
 
-    
+
+       <!-- Modal: Ver caso-->
+        <div id="verCaso" class="modal fade" role="dialog">
+            <div class="modal-dialog">
+                <!-- Modal content-->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        <h4 class="modal-title">Caso N° 1542</h4>
+                    </div>
+                    <div class="modal-body ">
+                        <div class="form-group">
+                            <label>Nombre del cliente</label>
+                            <input class="form-control" value="Luis Alvarez Cárdenas" readonly="true">
+                        </div>
+						<div class="form-group">
+                            <label>Tipo de consulta</label>
+                            <input class="form-control" value="Cancelación de partida de nacimiento" readonly="true">                            
+                        </div>                        
+						<div class="form-group">
+                            <label>Tipo de actuación</label>
+                            <input class="form-control" value="Asesoría Jurídica" readonly="true">                          				
+                        </div>
+						<div class="form-group">
+                            <label>Observaciones del caso</label>
+                            <textarea class="form-control" rows="5" id="comment" readonly="true">
+                            La usuaria nació en casa.
+                            </textarea>
+                        </div>
+						<div class="form-group">
+                            <label>Documentos entregados</label> 
+                            <textarea class="form-control" rows="5" id="comment" readonly="true">
+                                * Solicitud de cancelación de 09.04.13 
+                                * Voucher BN
+                                * Acta de Apersonamiento (Expediente N°914-2013/ SDRC/GPRC/RENIEC).
+                                * Acta de nacimiento N° 100673008.                      
+                            </textarea>							
+                        </div>
+                        <div class="form-group">
+                            <label>Comentarios</label> 
+                            <textarea class="form-control" rows="5" id="comment" >
+                            </textarea>							
+                        </div>
+                    </div>
+                    <div class="modal-footer ">
+                        <button type="button" class="btn btn-info" data-dismiss="modal">Aprobar</button>
+                        <button type="button" class="btn btn-danger" data-dismiss="modal">Rechazar</button>
+                        <button type="button" class="btn btn-default" data-dismiss="modal">Cerrar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+
+    <!-- jQuery Version 1.11.0 -->
+    <script src="js/jquery-1.11.0.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
 
     <!-- Morris Charts JavaScript -->
-    <script src="js/plugins/morris/raphael.min.js"></script>
+    <!--<script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
     <script src="js/plugins/morris/morris-data.js"></script>
-
+    -->
     <!-- Flot Charts JavaScript -->
     <!--[if lte IE 8]><script src="js/excanvas.min.js"></script><![endif]-->
-    <script src="js/plugins/flot/jquery.flot.js"></script>
+    <!--<script src="js/plugins/flot/jquery.flot.js"></script>
     <script src="js/plugins/flot/jquery.flot.tooltip.min.js"></script>
     <script src="js/plugins/flot/jquery.flot.resize.js"></script>
     <script src="js/plugins/flot/jquery.flot.pie.js"></script>
     <script src="js/plugins/flot/flot-data.js"></script>
+    -->
 
 </body>
 
