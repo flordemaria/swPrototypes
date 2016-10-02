@@ -189,7 +189,9 @@
                     <div class="col-lg-12">
                         <h1 class="page-header">
                             Notas - Vista Profesor
+                            <button class="btn btn-info pull-right">Lista de alumnos</button>
                         </h1>
+
                     </div>
                 </div>
                 <!-- /.row -->
@@ -203,6 +205,9 @@
                         <col style="width:10%">
                         <thead>
                             <tr>
+                                <div>
+                                    <h3 style="margin: 5px">Mauricio Castañeda<small><br>Semana 6<small></h3>
+                                </div>
                                 <th align="center">Número</th>
                                 <th>Criterios</th>
                                 <th align="center">Puntos</th>
@@ -297,14 +302,14 @@
             <div class="row">
                 <div class="col-md-12">
                     <div class="pull-right">
-                        <label>Nota Final</label>    
-                        <div class="input-group col-md-12">
-                            <input type="text" class="form-control" readonly="true">
-                        </div>
                         <label>Puntaje Extra</label>    
                         <div class="input-group col-md-6">
                             <input type="text" class="form-control pull-right">
                         </div>
+                        <label>Nota Final</label>    
+                        <div class="input-group col-md-12">
+                            <input type="text" class="form-control" readonly="true">
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -315,7 +320,7 @@
             <div class="jumbotron">
                 <label>Reclamo </label>    
                 <div class="form-group">                
-                    <textarea class="form-control" rows="5" id="comment"></textarea>
+                    <textarea class="form-control" rows="5" id="comment" readonly="true"></textarea>
                 </div>
 
                 <label>Respuesta al reclamo </label>    
